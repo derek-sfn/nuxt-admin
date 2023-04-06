@@ -1,0 +1,48 @@
+<script lang="ts" setup>
+import type { NavLink } from './types';
+import { getComputedNavLinkToProp } from './utils';
+
+const props = defineProps<{ item: NavLink}>()
+</script>
+
+<template>
+  <li
+    class="nav-link"
+    :class="{ disabled: item.disable }"
+  >
+    <NuxtLink to="form-layouts">
+      <VIcon
+        v-bind="item.icon"
+        class="nav-item-icon"
+      />
+      <TransitionGroup name="transition-slide-x">
+        <!-- 👉 Title -->
+        <span
+          key="title"
+          class="nav-item-title"
+        >
+          {{ item.title }}
+        </span>
+
+        <!-- 👉 Badge -->
+        <span
+          v-if="item.badgeContent"
+          key="badge"
+          class="nav-item-badge"
+          :class="item.badgeClass"
+        >
+          {{ item.badgeContent }}
+        </span>
+      </TransitionGroup>
+    </NuxtLink>
+  </li>
+</template>
+
+<style lang="scss">
+.layout-vertical-nav {
+  .nav-link a {
+    display: flex;
+    align-items: center;
+  }
+}
+</style>
