@@ -1,3 +1,3 @@
 <template>
-  aas
+  dashboard
 </template>

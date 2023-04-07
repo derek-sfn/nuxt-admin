@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Anchor } from 'vuetify/lib/components';
+import { Anchor } from 'vuetify/lib/components';
 import avatar1 from '@/assets/images/avatars/avatar-1.png'
 
 const avatarBadgeProps = {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import logo from '~/assets/logo.svg?raw'
+import logo from '~/assets/logo.svg?raw';
 
 </script>
 
@@ -26,7 +26,7 @@ import logo from '~/assets/logo.svg?raw'
     <VerticalNavLink
       :item="{
         title: 'Dashboard',
-        to: 'index',
+        to: '/',
         icon: { icon: 'mdi-home-outline' }
       }"
     />
@@ -60,7 +60,7 @@ import logo from '~/assets/logo.svg?raw'
     <VerticalNavLink
       :item="{
         title: 'Error',
-        to: { path: '/error' },
+        to: '/error',
         target: '_blank',
         icon: { icon: 'mdi-alert-circle-outline' }
       }"

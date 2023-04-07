@@ -10,7 +10,7 @@ const props = defineProps<{ item: NavLink}>()
     class="nav-link"
     :class="{ disabled: item.disable }"
   >
-    <NuxtLink to="form-layouts">
+    <nuxt-link :to="{ path: `${item.to}` }" :target="item.target">
       <VIcon
         v-bind="item.icon"
         class="nav-item-icon"
@@ -34,7 +34,7 @@ const props = defineProps<{ item: NavLink}>()
           {{ item.badgeContent }}
         </span>
       </TransitionGroup>
-    </NuxtLink>
+    </nuxt-link>
   </li>
 </template>
 
